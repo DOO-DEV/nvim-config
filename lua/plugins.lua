@@ -17,18 +17,18 @@ end
 local packer_ok, packer = pcall(require, 'packer')
 if packer_ok then
 	packer.startup(function(use)
-		
+
 		-- update packer itself because packer is a plugin btw.
 		use { 'wbthomason/packer.nvim' }
 
 		use { 'catppuccin/nvim', as = 'catppuccin' }
 
 		use {
-        'nvim-treesitter/nvim-treesitter',
-        run = function()
-            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-            ts_update()
-        end,
+      'nvim-treesitter/nvim-treesitter',
+      run = function()
+        local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+        ts_update()
+      end,
     }
 
 		-- autopairs
@@ -46,6 +46,11 @@ if packer_ok then
   	use 'saadparwaiz1/cmp_luasnip'
   	use 'neovim/nvim-lspconfig'
 
+  	-- status line
+		use {
+  		'nvim-lualine/lualine.nvim',
+  		requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+		}
 		if PACKER_BOOTSTRAP then
 			packer.sync()
 		end
