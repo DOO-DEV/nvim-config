@@ -22,5 +22,6 @@ I use these tools right now:
 - [X] Treesitter
 - [X] Nvim-lspconfig(an api for intract with treesitter)
 - [X] Bunch of auto-complete stuff(see `lua/plugin.lua`)
+- [X] Telescop fuzzy finder
 
 There is a say: Don't try make vim like other editors. vim has unique philosophy, accept vim as it is :)
