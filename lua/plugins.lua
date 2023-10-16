@@ -51,6 +51,17 @@ if packer_ok then
   		'nvim-lualine/lualine.nvim',
   		requires = { 'nvim-tree/nvim-web-devicons', opt = true }
 		}
+		
+		-- vim be good
+		use 'ThePrimeagen/vim-be-good'
+
+		-- 
+		use {
+  		'nvim-telescope/telescope.nvim', tag = '0.1.4',
+	  	requires = { {'nvim-lua/plenary.nvim'} }
+		}
+
+
 		if PACKER_BOOTSTRAP then
 			packer.sync()
 		end

@@ -33,3 +33,10 @@ map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', o)
 map('n', 'gh', '<cmd>lua vim.lsp.buf.signature_help()<CR>', o)
 map('n', 'gD', '<cmd>lua vim.lsp.buf.definition()<CR>', o)
 map('i', '<C-h>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', o)
+
+-- telescop
+local builtin = require('telescope.builtin')
+map('n', '<leader>ff', builtin.find_files, {})
+map('n', '<leader>fg', builtin.live_grep, {})
+map('n', '<leader>fb', builtin.buffers, {})
+map('n', '<leader>fh', builtin.help_tags, {})
