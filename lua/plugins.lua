@@ -61,6 +61,8 @@ if packer_ok then
 	  	requires = { {'nvim-lua/plenary.nvim'} }
 		}
 
+		use {"akinsho/toggleterm.nvim", tag='*' }
+
 
 		if PACKER_BOOTSTRAP then
 			packer.sync()

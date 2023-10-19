@@ -40,3 +40,7 @@ map('n', '<leader>ff', builtin.find_files, {})
 map('n', '<leader>fg', builtin.live_grep, {})
 map('n', '<leader>fb', builtin.buffers, {})
 map('n', '<leader>fh', builtin.help_tags, {})
+
+-- toggleterm
+map('n', '<leader>hto', '<cmd>ToggleTerm dir=$(pwd) direction=horizontal<CR>', o)
+map('n', '<leader>fto', '<cmd>ToggleTerm dir=$(pwd) direction=float<CR>', o)
