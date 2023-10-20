@@ -41,9 +41,11 @@ if lsp_ok then
 	vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = 'rounded' })
 
 	-- servers
-	lsp['tsserver'].setup {
+	local servers = { 'clangd', 'tsserver', 'gopls', 'rust_analyzer', 'pyright' }
+	for _, s in ipairs(servers) do
+		lsp[s].setup {
 		on_attach = on_attach,
 		capabilities = capabilities
 	}
-
+	end
 end

@@ -55,7 +55,6 @@ if packer_ok then
 		-- vim be good
 		use 'ThePrimeagen/vim-be-good'
 
-		-- 
 		use {
   		'nvim-telescope/telescope.nvim', tag = '0.1.4',
 	  	requires = { {'nvim-lua/plenary.nvim'} }
@@ -63,6 +62,17 @@ if packer_ok then
 
 		use {"akinsho/toggleterm.nvim", tag='*' }
 
+		-- lazy.nvim
+use {
+  "folke/noice.nvim",
+  dependencies = {
+    "MunifTanjim/nui.nvim",
+    "rcarriga/nvim-notify",
+    }
+}
+		use {
+    "williamboman/mason.nvim"
+		}
 
 		if PACKER_BOOTSTRAP then
 			packer.sync()
