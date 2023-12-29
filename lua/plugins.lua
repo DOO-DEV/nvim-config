@@ -62,14 +62,6 @@ if packer_ok then
 
 		use {"akinsho/toggleterm.nvim", tag='*' }
 
-		-- lazy.nvim
-use {
-  "folke/noice.nvim",
-  dependencies = {
-    "MunifTanjim/nui.nvim",
-    "rcarriga/nvim-notify",
-    }
-}
 		use {
     "williamboman/mason.nvim"
 		}

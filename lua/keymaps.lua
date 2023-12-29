@@ -4,7 +4,7 @@ local o = { silent = true, noremap = true }
 map('', '<Space>', '<Nop>', o) -- unbind space
 vim.g.mapleader = ' ' -- map leader key to space
 
-
+map('n', '<leader>pv', vim.cmd.Ex)
 map('n', 'U', '<C-R>', o)
 map('n', '<C-s>', '<cmd>w<CR>', o)
 map('n', 'x', '"_x', o) -- delete without yanking
